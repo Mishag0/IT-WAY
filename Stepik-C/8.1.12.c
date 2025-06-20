@@ -8,15 +8,15 @@ int main(void) {
   for (int i = 0; i < N; i++) {
     scanf("%d", &arr[i]);
   }
-  int a = N/2,b = N/2;
+  int a = N / 2, b = N / 2;
   int arr2[a], arr3[b];
 
-  for (int j = N/2; j < N; j++) {
-    arr2[j] = arr[j];
-    printf("%d ", arr2[j]);
+  for (int i = N / 2; i < N; i++) {
+    arr2[i - (N / 2)] = arr[i];
+    printf("%d ", arr2[i - (N / 2)]);
   }
 
-  for (int i = 0; i < N/2; i++) {
+  for (int i = 0; i < N / 2; i++) {
     arr3[i] = arr[i];
     printf("%d ", arr3[i]);
   }
