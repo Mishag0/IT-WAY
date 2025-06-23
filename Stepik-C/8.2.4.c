@@ -1,20 +1,19 @@
 #include <stdio.h>
+#include <stdlib.h>
 int main(void) {
 
-  int N, M;
-
+  int N;
   scanf("%d", &N);
-  int count = 1;
+  if (N > 10) {
+    return 0;
+  }
   int arr[N][N];
   for (int i = 0; i < N; i++) {
     for (int j = 0; j < N; j++) {
-      if (i = j) arr [i][j] = N - 3;
-      else
-      if {(i == j + 1  || j == i + 1) arr [i][j] = N - 2;}
-      else
-      {if (i == j + 2  || j == i + 2) arr [i][j] = N - 1;}
-      
-  printf ("\n");
+      arr[i][j] = abs(i - j) + 1;
+      printf("%d ", arr[i][j]);
+    }
+    printf("\n");
   }
   return 0;
 }
