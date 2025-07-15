@@ -24,7 +24,7 @@
 | JavaScript Backend   | 0%       | P01 (ожидание) |
 | JavaScript Frontend  | 0%       | P01 (ожидание) |
 | Go                   | 0%       | P01 (ожидание) |
-| DevOps               | 0%       | P01 (ожидание) |
+| DevOps               | 0%       | P01 (ожидание) | DO1 - 100%
 | Cyber Security       | 0%       | P01 (ожидание) |
 
 `-`Задай название машины вида user-1.
