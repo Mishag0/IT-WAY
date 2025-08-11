@@ -1,33 +1,33 @@
 #include <stdio.h>
-#include <string.h>
 
 int main() {
-
-  char str[100];
-  fgets(str, 100, stdin);
-  int k, l;
-  int count = 0;
-  if (str[0] == '*' && str[1] == '/')
-    count -= 2;
-  for (int i = 0; str[i] != '\n'; i++) {
-    if (str[i] == '/' && str[i + 1] == '*' && str[i + 2] != '/') {
-      k = i;
-      count += 2;
+    int N;
+    scanf("%d", &N);
+    
+    // Определяем количество цифр в числе
+    int temp = N;
+    int digits = 0;
+    while (temp > 0) {
+        temp /= 10;
+        digits++;
     }
-    if (str[i] == '*' && str[i + 1] == '/') {
-      l = i + 2;
-      count += 2;
+    
+    // Разбиваем число на цифры и сохраняем в массив
+    int num[10]; // Достаточно для чисел до 10^7
+    temp = N;
+    for (int i = digits - 1; i >= 0; i--) {
+        num[i] = temp % 10;
+        temp /= 10;
     }
-  }
-  if (count == 4) {
-    for (int i = 0; i < k; i++) {
-      printf("%c", str[i]);
+    
+    // Выводим цифры с разделением на триады
+    for (int i = 0; i < digits; i++) {
+        printf("%d", num[i]);
+        // Вставляем пробел после каждой триады (кроме последней)
+        if ((digits - i - 1) % 3 == 0 && i != digits - 1) {
+            printf(" ");
+        }
     }
-    for (int i = l; str[i] != '\n'; i++) {
-      printf("%c", str[i]);
-    }
+    
     return 0;
-  }
-  fputs(str, stdout);
-  return 0;
 }
