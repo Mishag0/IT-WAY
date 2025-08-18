@@ -2,3 +2,4 @@ exe
 Stepik-C/*.o
 Stepik-C/*.out
 Stepik-C/*.exe
+.vscode
