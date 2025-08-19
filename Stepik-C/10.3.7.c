@@ -11,6 +11,7 @@ int gcd(int x, int y)
 
 void reduce_fraction(int *a, int *b)
 {
-
-
+    int temp = gcd(*a,*b);
+    *a = *a / temp;
+    *b = *b / temp;
 }
